@@ -1,0 +1,577 @@
+.orders-page {
+    width: 70%;
+    margin-left: max(5vw, 25px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 16px;
+}
+
+/* Header */
+.page-header h1 {
+    color: #49557e;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.page-header p {
+    color: #6d6d6d;
+    margin-bottom: 20px;
+}
+
+/* Stats Grid - Now using Bootstrap classes */
+
+/* Filters */
+.filters-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #49557e;
+}
+
+.search-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.search-btn:hover {
+    opacity: 0.8;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.status-filter,
+.limit-filter {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+}
+
+/* Orders Container */
+.orders-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    overflow: hidden;
+}
+
+/* Orders Table */
+.orders-table {
+    width: 100%;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 120px 200px 150px 120px 150px 120px;
+    gap: 15px;
+    padding: 15px 20px;
+    background: #f7f7f9;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.order-row {
+    display: grid;
+    grid-template-columns: 120px 200px 150px 120px 150px 120px;
+    gap: 15px;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.order-row:hover {
+    background: #f7f7f9;
+}
+
+.col-id {
+    font-weight: 600;
+    color: #49557e;
+}
+
+.customer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.customer-name {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.customer-phone {
+    color: #6d6d6d;
+    font-size: 12px;
+}
+
+.amount {
+    font-weight: 600;
+    color: #28a745;
+    font-size: 16px;
+}
+
+.status-select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.status-select:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.view-detail-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.view-detail-btn:hover {
+    opacity: 0.8;
+}
+
+/* Expanded Order Detail */
+.order-detail-expanded {
+    background: #f7f7f9;
+    border-top: 1px solid #eee;
+    padding: 20px;
+}
+
+.detail-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 12px;
+    color: white;
+}
+
+.detail-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-section {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.detail-section h4 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #6d6d6d;
+    font-size: 14px;
+}
+
+.info-value {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.total-price {
+    color: #28a745;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Products List */
+.products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f7f7f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.product-name {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.product-description {
+    margin: 0;
+    font-size: 12px;
+    color: #6d6d6d;
+    line-height: 1.4;
+}
+
+.product-meta {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.product-category {
+    background: #e9ecef;
+    color: #49557e;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.product-quantity {
+    color: #6d6d6d;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.product-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+}
+
+.product-unit-price {
+    color: #6d6d6d;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.product-total-price {
+    color: #28a745;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.no-products {
+    text-align: center;
+    padding: 40px 20px;
+    color: #6d6d6d;
+    font-style: italic;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #f7f7f9;
+    border-top: 1px solid #eee;
+}
+
+.pagination-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    opacity: 0.8;
+}
+
+.pagination-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    color: #6d6d6d;
+    font-size: 14px;
+}
+
+/* Loading and Error States */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    color: #6d6d6d;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #e2e2e2;
+    border-top: 4px solid #49557e;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    color: #6d6d6d;
+    text-align: center;
+}
+
+.error-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.error-container h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.error-container p {
+    margin: 0 0 20px 0;
+    color: #6d6d6d;
+}
+
+.retry-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.retry-btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .table-header,
+    .order-row {
+        grid-template-columns: 100px 150px 120px 100px 120px 100px;
+        gap: 10px;
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .orders-page {
+        width: 90%;
+        margin-left: 5vw;
+    }
+    
+    .search-form {
+        flex-direction: column;
+    }
+    
+    .filter-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .table-header,
+    .order-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .table-header {
+        display: none;
+    }
+    
+    .order-row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .col-id::before {
+        content: "Mã đơn: ";
+        font-weight: 600;
+        color: #6d6d6d;
+    }
+    
+    .col-customer::before {
+        content: "Khách hàng: ";
+        font-weight: 600;
+        color: #6d6d6d;
+    }
+    
+    .col-date::before {
+        content: "Ngày đặt: ";
+        font-weight: 600;
+        color: #6d6d6d;
+    }
+    
+    .col-amount::before {
+        content: "Tổng tiền: ";
+        font-weight: 600;
+        color: #6d6d6d;
+    }
+    
+    .col-status::before {
+        content: "Trạng thái: ";
+        font-weight: 600;
+        color: #6d6d6d;
+    }
+    
+    .col-actions::before {
+        content: "Thao tác: ";
+        font-weight: 600;
+        color: #6d6d6d;
+    }
+    
+    .detail-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .product-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    
+    .product-price {
+        align-items: flex-start;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .pagination {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,123 @@
+.navbar {
+    padding:20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.navbar .logo{
+    width: 150px;
+}
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+}
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar button{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.navbar button:hover{
+    background-color: #ffe5e0; /* hồng nhạt cam */
+}
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
+.navbar li{
+    cursor: pointer;
+}
+.navbar-search-icon{
+    position: relative;
+}
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+.navbar-profile{
+    position: relative;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    border: 2px solid #fff;
+    transition: border-color 0.3s ease;
+}
+
+.profile-avatar:hover {
+    border-color: tomato;
+}
+
+.nav-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    min-width: 200px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.nav-profile-dropdown.show{
+    display: block;
+}
+
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-profile-dropdown li:hover{
+    background-color: #f5f5f5;
+    color: tomato;
+}
+
+.nav-profile-dropdown img{
+    width: 20px;
+    height: 20px;
+}
+
+.nav-profile-dropdown hr {
+    margin: 5px 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+.navbar-menu li:hover {
+    color: orange; /* đổi màu chữ khi hover */
+    background-color: rgba(255, 255, 255, 0.1); /* tùy chọn: nền nhẹ khi hover */
+}
+.cart-items-item .cross{
+    cursor: pointer;
+}
