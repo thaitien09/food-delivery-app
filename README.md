@@ -8,7 +8,7 @@
 - Đăng ký/Đăng nhập người dùng
 - Duyệt menu món ăn
 - Thêm món ăn vào giỏ hàng
-- Đặt hàng và thanh toán
+- Đặt hàng (chưa tích hợp thanh toán)
 - Theo dõi đơn hàng
 - Đánh giá món ăn
 
@@ -24,7 +24,6 @@
 - Xác thực JWT
 - Kết nối MongoDB
 - Upload file với Multer
-- Tích hợp Stripe thanh toán
 
 ## 🛠️ Công nghệ sử dụng
 
@@ -33,7 +32,6 @@
 - **Vite** - Build tool
 - **React Router** - Routing
 - **Axios** - HTTP client
-- **Stripe** - Payment processing
 
 ### Backend
 - **Node.js** - Runtime
@@ -82,7 +80,7 @@ Tạo file `.env` trong thư mục `backend`:
 PORT=4000
 DB_URI=mongodb://localhost:27017/food-delivery
 JWT_SECRET=your-jwt-secret-key
-STRIPE_SECRET_KEY=your-stripe-secret-key
+# STRIPE_SECRET_KEY=your-stripe-secret-key (chưa sử dụng)
 ```
 
 ### 6. Chạy ứng dụng
